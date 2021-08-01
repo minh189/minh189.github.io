@@ -1,0 +1,68 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    .container__about-hotel {
+        width: 100% !important;
+    }
+    .container__about-map {
+        width: 100% !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .form__picked-action {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .header__list {
+        display: none;
+    }
+    .header__mobile-menu {
+        display: block;
+    }
+    .form__img {
+        height: 533px;
+        max-height: 100%;
+    }
+    .form__picked {
+        padding: 0 16px;
+        max-height: 100%;
+    }
+    .container__room-mobile {
+        padding-left: 8px !important;
+    }
+    .container__service-mobile {
+        padding-left: 16px;
+        margin-top: 16px;
+    }
+    .container__contact-mobile {
+        margin-bottom: 8px;
+    }
+    .container__places-mobile {
+        padding-left: 16px !important;
+        
+    }
+    .container__exchange-submit {
+        max-width: 100%;
+    }
+    .col,
+    .col-half,
+    .col-third {
+        width: 100% !important;
+    }
+    .container__about-description,
+    .container__about-policy,
+    .container__about-map,
+    .container__places-header,
+    .container__places-para,
+    .container__about-heading {
+        padding-left: 8px;
+    }
+    .form {
+        margin-top: 40px;
+    }
+}

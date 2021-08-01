@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Hotel Service</title>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <label for="input-mobile" class="header__mobile-menu">
+                <i class="far fa-bars header__mobile-icon"></i>
+            </label>
+
+            <input type="checkbox" class="input__nav-mobile" id="input-mobile" hidden>
+            <ul class="header__list">
+                <li class="header__item header__item--active">
+                    <a href="" class="header__link header__link--active">
+                        <i class="fas fa-bed header__icon"></i>
+                        Local
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="" class="header__link">Rooms</a>
+                </li>
+                <li class="header__item">
+                    <a href="" class="header__link">About</a>
+                </li>
+                <li class="header__item">
+                    <a href="" class="header__link">Contact</a>
+                </li>
+            </ul>
+            <div class="header__book-btn">
+                <a href="" class="header__link">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Form booked header -->
+        <div class="form">
+            <img src="./assets/image/hotel-img-w3.jpg" alt="Hotel image" class="form__img">
+            <div class="form__picked">
+                <div class="form__picked-heading">
+                    <h2 class="form__picked-title">
+                        <i class="fas fa-bed form__picked-icon"></i>
+                        Hotel Name
+                    </h2>
+                </div>
+                
+                <div class="form__picked-content">
+                    <form action="" class="form__picked-action">
+                        <div class="row mb-8">
+                            <div class="col col-half form__picked-book">
+                                <label for="" class="form__picked-label">
+                                    <i class="far fa-calendar-week"></i>
+                                    Check in
+                                </label>
+                                <input type="text" class="form__picked-input" placeholder="DD MM YYYY" name="CheckIn" required>
+                            </div>
+
+                            <div class="col col-half form__picked-book">
+                                <label for="" class="form__picked-label">
+                                    <i class="far fa-calendar-week"></i>
+                                    Check out
+                                </label>
+                                <input type="text" class="form__picked-input" placeholder="DD MM YYYY" name="CheckOut" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-8">
+                            <div class="col col-half form__picked-book">
+                                <label for="" class="form__picked-label">
+                                    <i class="fas fa-male"></i>
+                                    Adults
+                                </label>
+                                <input type="number" class="form__picked-input" value="1" min="1" max="6" name="Adults">
+                            </div>
+
+                            <div class="col col-half form__picked-book">
+                                <label for="" class="form__picked-label">
+                                    <i class="fas fa-child"></i>
+                                    Kids
+                                </label>
+                                <input type="number" class="form__picked-input" value="0" min="0" max="6" name="Kids">
+                            </div>
+                        </div>
+                        <button class="form__picked-btn">
+                            <i class="fal fa-search form__picked-btn-icon"></i>
+                            Search availability
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Container -->
+        <div class="container">
+            <div class="mt-16 container__room p-l-8">
+                <h3 class="container__section-heading">Rooms</h3>
+                <p class="container__section-para">
+                    Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.
+                </p>
+
+                <form action="" class="container__room-form">
+                    <div class="row mb-16">
+                        <div class="col p-l-8 container__room-mobile" style="width: 24.9999%">
+                            <label for="" class="container__room-label">
+                                <i class="far fa-calendar-week"></i>
+                                Check In
+                            </label>
+                            <input type="text" name="CheckIn" required placeholder="DD MM YYYY" class="container__room-input">
+                        </div>
+                        <div class="col container__room-mobile" style="width: 24.9999%">
+                            <label for="" class="container__room-label">
+                                <i class="far fa-calendar-week"></i>
+                                Check Out
+                            </label>
+                            <input type="text" name="CheckOut" required placeholder="DD MM YYYY" class="container__room-input">
+                        </div>
+    
+                        <div class="col container__room-mobile" style="width: 16.6666%"> 
+                            <label for="" class="container__room-label">
+                                <i class="fas fa-male"></i>
+                                Adults
+                            </label>
+                            <input type="number" name="Adults" value="1" min="1" max="5" class="container__room-input">
+                        </div>
+                        <div class="col container__room-mobile" style="width: 16.6666%"> 
+                            <label for="" class="container__room-label">
+                                <i class="fas fa-child"></i>
+                                Kids
+                            </label>
+                            <input type="number" name="Kids" value="1" min="1" max="5" class="container__room-input">
+                        </div>
+                        <div class="col container__room-mobile" style="width: 16.6666%">
+                            <label for="" class="container__room-label">
+                                <i class="fal fa-search container__room-icon"></i>
+                                Search
+                            </label>
+                            <input type="submit" value="Search" class="container__room-btn"></input>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Room service -->
+                <div class="row container__service-room">
+                    <div class="col col-third p-l-8 container__service-mobile" data-aos="fade-up">
+                        <img src="./assets/image/room_single.jpg" alt="Single room" class="container__service-img">
+                        <div class="container__service-content">
+                            <h3 class="container__service-header">Single Room</h3>
+                            <p class="container__service-price">From $99</p>
+                            <p class="container__service-descrip">Single bed</p>
+                            <p class="container__service-S">
+                                15m<sup>2</sup>
+                            </p>
+                            <div class="container__service-needed">
+                                <i class="fas fa-bath"></i>
+                                <i class="fas fa-phone"></i>
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <button class="container__service-btn mb-16">
+                                Choose Room
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col col-third container__service-mobile" data-aos="fade-down">
+                        <img src="./assets/image/room_double.jpg" alt="Double room" class="container__service-img">
+                        <div class="container__service-content">
+                            <h3 class="container__service-header">Double Room</h3>
+                            <p class="container__service-price">From $149</p>
+                            <p class="container__service-descrip">Queen-size bed</p>
+                            <p class="container__service-S">
+                                25m<sup>2</sup>
+                            </p>
+                            <div class="container__service-needed">
+                                <i class="fas fa-bath"></i>
+                                <i class="fas fa-phone"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fal fa-desktop"></i>
+                            </div>
+                            <button class="container__service-btn mb-16">
+                                Choose Room
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col col-third container__service-mobile" data-aos="fade-up">
+                        <img src="./assets/image/room_deluxe.jpg" alt="Deluxe room" class="container__service-img">
+                        <div class="container__service-content">
+                            <h3 class="container__service-header">Deluxe Room</h3>
+                            <p class="container__service-price">From $199</p>
+                            <p class="container__service-descrip">King-size bed</p>
+                            <p class="container__service-S">
+                                40m<sup>2</sup>
+                            </p>
+                            <div class="container__service-needed">
+                                <i class="fas fa-bath"></i>
+                                <i class="fas fa-phone"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-glass-martini"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <button class="container__service-btn mb-16">
+                                Choose Room
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- About and map -->
+            <div class="row mt-32 container__about">
+                <div class="col container__about-hotel" style="width: 33.3333%" data-aos="fade-up">
+                    <h3 class="container__about-heading">About</h3>
+                    <p class="container__about-description">
+                        Our hotel is one of a kind. It is truely amazing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                    <p class="container__about-policy">
+                        We accept:
+                        <i class="far fa-credit-card"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </p>
+                </div>
+                <div class="col container__about-map" style="width: 66.6666%" data-aos="fade-down">
+                    <img src="./assets/image/map.jpg" alt="Map" class="container__about-img">
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="row container__contact" >
+                <div class="col col-third container__contact-mobile" data-aos="fade-down">
+                    <p class="container__contact-control">
+                        <i class="fas fa-map-marker-alt container__contact-icon"></i>
+                        9/8 16 Street, ThuDuc, VN
+                    </p>
+                </div>
+                <div class="col col-third container__contact-mobile" data-aos="fade-in">
+                    <p class="container__contact-control">
+                        <i class="fas fa-phone-alt container__contact-icon"></i>
+                        +084 354 070 929
+                    </p>
+                </div>
+                <div class="col col-third container__contact-mobile" data-aos="fade-up">
+                    <p class="container__contact-control">
+                        <i class="fas fa-envelope container__contact-icon"></i>
+                        Email: lne28102004@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Infomation -->
+            <div class="container__info" data-aos="fade-in">
+                <h6 class="container__info-title">
+                    <i class="fas fa-info container__info-icon"></i>
+                    On demand, we can offer playstation, babycall, children care, dog equipment, etc.
+                </h6>
+            </div>
+
+            <!-- Places hotel -->
+            <div class="container__places-box p-r-l mt-16">
+                <h3 class="container__places-header">Our Hotel</h3>
+                <p class="container__places-para">You can find our hotels anywhere in the world:</p>
+            </div>
+
+            <!-- Img over the world -->
+            <div class="row p-r-l container__places">
+                <div class="col col-half container__places-mobile" data-aos="fade-in">
+                    <div class="container__places-sub">
+                        <img src="./assets/image/cinqueterre.jpg" alt="Cinqueterre" class="container__places-img">
+                        <span class="container__places-name">Cinque Terre</span>
+                    </div>
+                </div>
+                
+                <div class="col col-half container__places-mobile" data-aos="fade-out">
+                    <div class="row">
+                        <div class="col col-half container__places-mobile">
+                            <div class="container__places-sub">
+                                <img src="./assets/image/newyork2.jpg" alt="New York" class="container__places-img">
+                                <span class="container__places-name">New York</span>
+                            </div>
+                        </div>
+                        <div class="col col-half container__places-mobile">
+                            <div class="container__places-sub">
+                                <img src="./assets/image/sanfran.jpg" alt="San Fransisco" class="container__places-img">
+                                <span class="container__places-name">San Francisco</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-half container__places-mobile">
+                            <div class="container__places-sub">
+                                <img src="./assets/image/pisa.jpg" alt="Pisa" class="container__places-img">
+                                <span class="container__places-name">Pisa</span>
+                            </div>
+                        </div>
+                        <div class="col col-half container__places-mobile">
+                            <div class="container__places-sub">
+                                <img src="./assets/image/paris.jpg" alt="Paris" class="container__places-img">
+                                <span class="container__places-name">Paris</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buy Ticket -->
+            <div class="container__buy-ticket" data-aos="fade-in">
+                <h2 class="container__ticket-heading">Get the best offers first!</h2>
+                <p class="container__ticket-description">Join our newsletter.</p>
+                <form action="" class="container__ticket-form">
+                    <label for="" class="container__ticket-label">E-mail</label>
+                    <input type="text" class="container__ticket-input" name="Email" required placeholder="Your Email address">
+                    <input type="submit" class="container__ticket-btn" value="Subcribe">
+                </form>
+            </div>
+
+            <!-- Exchange form -->
+            <div class="container__exchange">
+                <h2 class="container__exchange-heading">Contact</h2>
+                <p class="container__exchange-sub">If you have any questions, do not hesitate to ask them.</p>
+            
+                <div class="row container__exchange-info">
+                    <div class="col col-half container__exchange-mobile" data-aos="fade-down">
+                        <p class="container__exchange-para">
+                            <i class="fas fa-map-marker-alt container__exchange-icon"></i>
+                            ThuDuc, VN
+                        </p>
+                        <p class="container__exchange-para">
+                            <i class="fas fa-phone-alt container__exchange-icon"></i>
+                            Phone: +084 354 070 929
+                        </p>
+                        <p class="container__exchange-para">
+                            <i class="fas fa-envelope container__exchange-icon"></i>
+                            Email: lne28102004@gmail.com
+                        </p>
+                    </div>
+
+                    <div class="col col-half container__exchange-mobile" data-aos="fade-up">
+                        <form action="" class="container__exchange-input-control">
+                            <div class="row">
+                                <div class="col col-half container__exchange-mobile" style="margin-bottom: 8px !important">
+                                    <input type="text" class="container__exchange-input" placeholder="Name" required>
+                                </div>
+                                <div class="col col-half container__exchange-mobile" style="margin-bottom: 8px !important">
+                                    <input type="email" class="container__exchange-input" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-full container__exchange-mobile">
+                                    <input type="message" class="container__exchange-input" placeholder="Massage" required>
+                                </div>
+                            </div>
+                            <input type="submit" class="container__exchange-submit" value="SEND MESSAGE">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h5 class="footer__heading">Find Us On</h5>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/Darkness2810" class="footer__social-link">
+                    <i class="fab fa-facebook-square footer__social-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/____element____/" class="footer__social-link">
+                    <i class="fab fa-instagram footer__social-icon"></i>
+                </a>
+                <a href="" class="footer__social-link">
+                    <i class="fab fa-pinterest-p footer__social-icon"></i>
+                </a>
+                <a href="" class="footer__social-link">
+                    <i class="fab fa-twitter footer__social-icon"></i>
+                </a>
+                <a href="" class="footer__social-link">
+                    <i class="fab fa-snapchat footer__social-icon"></i>
+                </a>
+                <a href="" class="footer__social-link">
+                    <i class="fab fa-linkedin-in footer__social-icon"></i>
+                </a>
+            </div>
+            <p class="footer__nocopyright">
+                Enforcement by 
+                <a href="https://www.facebook.com/Darkness2810" class="footer__nocopyright-link">VietMinh</a>
+            </p>
+        </footer>
+    
+    <script>
+        var inFo = 'Hello, tôi là một chiếc thông báo được Minh lập trình sẵn để hỏi rằng "Em ăn cơm chưa? Nếu ăn rồi thì bấm "Ok", chưa ăn hay uống sữa thì cũng "Ok" =))';
+        alert(inFo);
+    </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+            offset: 400,
+            duration: 1000
+        });
+      </script>    
+</body>
+</html>
